@@ -8,7 +8,8 @@
 
 ## Description
 An applicationt that enables users to randomly select from a list provided. Whose turn is it next? Find out with the Wheel of Destiny.
-![MainThumbnail](./public/WheelOfDestinyThumbnail.PNG)
+![FirstThumbnail](./public/WheelOfDestinyThumbnail.PNG)
+![SecondThumbnail](./public/WheelOfDestinyThumbnail2.PNG)
 
 ## Installation
 After cloning the repository, cd into the generated directory. Run 'npm i' then start the application using 'npm run dev'.
