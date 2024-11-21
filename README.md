@@ -1,4 +1,4 @@
-# Dungeon Crawler
+# Wheel of Destiny
 
 ## Table of Contents
 * [Description](#description)
