@@ -2,111 +2,118 @@ import { useState } from "react";
 import "./style.css";
 
 const Wheel = () => {
+  let bgColor1 = "rgb(255, 69, 0)";
+  let bgColor2 = "rgb(60, 179, 113)";
+  let bgColor3 = "rgb(72, 61, 139)";
+
   let namesArray = [
     "Mario Mario",
     "Luigi Mario",
     "Link Hyrule",
     "Zelda Hyrule",
     "Cloud Strife",
-    "Tifa Lockhart",
-    "Barret Wallace",
-    "Aerith Gainsborough",
-    "Squall Leonhart",
-    "Rinoa Heartilly",
-    "Zidane Tribal",
-    "Vivi Ornitier",
-    "Freya Crescent",
-    "Noctis Lucis Caelum",
-    "Ignis Scientia",
-    "Gladiolus Amicitia",
-    "Prompto Argentum",
-    "Cecil Harvey",
-    "Rosa Farrell",
-    "Lara Croft",
-    "Nathan Drake",
-    "Joel Miller",
-    "Ellie Williams",
-    "Kratos Spartan",
-    "Atreus Kratos",
-    "Geralt Rivia",
-    "Ciri Rivia",
-    "Triss Merigold",
-    "Dante Sparda",
-    "Vergil Sparda",
-    "Nero Sparda",
-    "Lady Nero",
-    "Ryu Hayabusa",
-    "Jin Kazama",
-    "Kazuya Mishima",
-    "Nina Williams",
-    "Heihachi Mishima",
-    "Ken Masters",
-    "Ryu Hoshi",
-    "Chun-Li Zhang",
-    "M. Bison",
-    "Akuma Gouki",
-    "Sagat Muay Thai",
-    "Cammy White",
-    "Blanka Silva",
-    "E. Honda",
-    "Felicia Aensland",
-    "Jill Valentine",
-    "Chris Redfield",
-    "Leon Kennedy",
-    "Claire Redfield",
-    "Dante Sparda",
-    "Luffy Monkey",
-    "Zoro Roronoa",
-    "Nami Swashbuckler",
-    "Usopp Sniper",
-    "Sanji Vinsmoke",
-    "Tony Tony Chopper",
-    "Nico Robin",
-    "Vivi Nefertari",
-    "Shanks Red",
-    "Ace Portgas",
-    "Izuku Midoriya",
-    "Katsuki Bakugo",
-    "Shoto Todoroki",
-    "Eijiro Kirishima",
-    "Tenya Iida",
-    "Tsuyu Asui",
-    "Momo Yaoyorozu",
-    "Kanao Tsuyuri",
-    "Tanjiro Kamado",
-    "Roronoa Zoro",
-    "Mikasa Ackerman",
-    "Armin Arlert",
-    "Jean Kirstein",
-    "Levi Ackerman",
-    "Hange Zoë",
-    "Reiner Braun",
-    "Eren Yeager",
-    "Maki Oze",
-    "Akane Tsunemori",
-    "Kogami Shinya",
-    "Shinya Kogami",
-    "Saitama Amai",
-    "Fubuki Kakashi",
-    "Kenshiro Kasumi",
-    "Jotaro Kujo",
-    "Joseph Joestar",
-    "Giorno Giovanna",
-    "Naruto Uzumaki",
-    "Sasuke Uchiha",
-    "Kakashi Hatake",
-    "Hinata Hyuga",
-    "Sakura Haruno",
-    "Shikamaru Nara",
-    "Iruka Umino",
-    "Neji Hyuga",
-    "Killer Bee",
-    "Itachi Uchiha",
-    "Madara Uchiha",
-    "Minato Namikaze",
+    // "Tifa Lockhart",
+    // "Barret Wallace",
+    // "Aerith Gainsborough",
+    // "Squall Leonhart",
+    // "Rinoa Heartilly",
+    // "Zidane Tribal",
+    // "Vivi Ornitier",
+    // "Freya Crescent",
+    // "Noctis Lucis Caelum",
+    // "Ignis Scientia",
+    // "Gladiolus Amicitia",
+    // "Prompto Argentum",
+    // "Cecil Harvey",
+    // "Rosa Farrell",
+    // "Lara Croft",
+    // "Nathan Drake",
+    // "Joel Miller",
+    // "Ellie Williams",
+    // "Kratos Spartan",
+    // "Atreus Kratos",
+    // "Geralt Rivia",
+    // "Ciri Rivia",
+    // "Triss Merigold",
+    // "Dante Sparda",
+    // "Vergil Sparda",
+    // "Nero Sparda",
+    // "Lady Nero",
+    // "Ryu Hayabusa",
+    // "Jin Kazama",
+    // "Kazuya Mishima",
+    // "Nina Williams",
+    // "Heihachi Mishima",
+    // "Ken Masters",
+    // "Ryu Hoshi",
+    // "Chun-Li Zhang",
+    // "M. Bison",
+    // "Akuma Gouki",
+    // "Sagat Muay Thai",
+    // "Cammy White",
+    // "Blanka Silva",
+    // "E. Honda",
+    // "Felicia Aensland",
+    // "Jill Valentine",
+    // "Chris Redfield",
+    // "Leon Kennedy",
+    // "Claire Redfield",
+    // "Dante Sparda",
+    // "Luffy Monkey",
+    // "Zoro Roronoa",
+    // "Nami Swashbuckler",
+    // "Usopp Sniper",
+    // "Sanji Vinsmoke",
+    // "Tony Tony Chopper",
+    // "Nico Robin",
+    // "Vivi Nefertari",
+    // "Shanks Red",
+    // "Ace Portgas",
+    // "Izuku Midoriya",
+    // "Katsuki Bakugo",
+    // "Shoto Todoroki",
+    // "Eijiro Kirishima",
+    // "Tenya Iida",
+    // "Tsuyu Asui",
+    // "Momo Yaoyorozu",
+    // "Kanao Tsuyuri",
+    // "Tanjiro Kamado",
+    // "Roronoa Zoro",
+    // "Mikasa Ackerman",
+    // "Armin Arlert",
+    // "Jean Kirstein",
+    // "Levi Ackerman",
+    // "Hange Zoë",
+    // "Reiner Braun",
+    // "Eren Yeager",
+    // "Maki Oze",
+    // "Akane Tsunemori",
+    // "Kogami Shinya",
+    // "Shinya Kogami",
+    // "Saitama Amai",
+    // "Fubuki Kakashi",
+    // "Kenshiro Kasumi",
+    // "Jotaro Kujo",
+    // "Joseph Joestar",
+    // "Giorno Giovanna",
+    // "Naruto Uzumaki",
+    // "Sasuke Uchiha",
+    // "Kakashi Hatake",
+    // "Hinata Hyuga",
+    // "Sakura Haruno",
+    // "Shikamaru Nara",
+    // "Iruka Umino",
+    // "Neji Hyuga",
+    // "Killer Bee",
+    // "Itachi Uchiha",
+    // "Madara Uchiha",
+    // "Minato Namikaze",
   ];
 
   const initialArrayLength = namesArray.length;
+
+  const [spinAngle, setSpinAngle] = useState(0);
+  const [result, setResult] = useState(null);
 
   if (namesArray.length === 1) {
     namesArray = [namesArray[0], namesArray[0], namesArray[0], namesArray[0]];
@@ -162,43 +169,40 @@ const Wheel = () => {
 
     if (initialArrayLength === 2) {
       if (index < 2) {
-        previousColor = "rgb(255, 69, 0)";
-        return "rgb(255, 69, 0)";
+        previousColor = bgColor1;
+        return bgColor1;
       } else {
-        previousColor = "rgb(60, 179, 113)";
-        return "rgb(60, 179, 113)";
+        previousColor = bgColor2;
+        return bgColor2;
       }
     } else if (initialArrayLength === 3) {
       if (index < 2) {
-        previousColor = "rgb(255, 69, 0)";
-        return "rgb(255, 69, 0)";
+        previousColor = bgColor1;
+        return bgColor1;
       } else if (index < 4) {
-        previousColor = "rgb(60, 179, 113)";
-        return "rgb(60, 179, 113)";
+        previousColor = bgColor2;
+        return bgColor2;
       } else {
-        previousColor = "rgb(72, 61, 139)";
-        return "rgb(72, 61, 139)";
+        previousColor = bgColor3;
+        return bgColor3;
       }
     }
 
     if (index === 0) {
-      previousColor = "rgb(255, 69, 0)";
-      return "rgb(255, 69, 0)";
+      previousColor = bgColor1;
+      return bgColor1;
     } else if (
       (index % 2 === 0 && !swapColors) ||
       (index % 2 !== 0 && swapColors)
     ) {
-      previousColor = "rgb(60, 179, 113)";
-      return "rgb(60, 179, 113)";
+      previousColor = bgColor2;
+      return bgColor2;
     }
     if ((index % 2 !== 0 && !swapColors) || (index % 2 === 0 && swapColors)) {
-      previousColor = "rgb(72, 61, 139)";
-      return "rgb(72, 61, 139)";
+      previousColor = bgColor3;
+      return bgColor3;
     }
   };
-
-  const [spinAngle, setSpinAngle] = useState(0);
-  const [result, setResult] = useState(null);
 
   const handleSpin = () => {
     const spinDegree = Math.floor(Math.random() * (1800 - 360 + 1)) + 360; // Random spin angle between 360 and 1800 degrees
@@ -222,7 +226,7 @@ const Wheel = () => {
         className="result"
         style={{ visibility: result === null ? "hidden" : "visible" }}
       >
-        Result: {result}
+       {result}!
       </div>
       <div className="wheelContainer">
         <div className="pointer"></div>
