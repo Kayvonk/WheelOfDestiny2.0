@@ -12,102 +12,102 @@ const Wheel = () => {
     "Link Hyrule",
     "Zelda Hyrule",
     "Cloud Strife",
-    // "Tifa Lockhart",
-    // "Barret Wallace",
-    // "Aerith Gainsborough",
-    // "Squall Leonhart",
-    // "Rinoa Heartilly",
-    // "Zidane Tribal",
-    // "Vivi Ornitier",
-    // "Freya Crescent",
-    // "Noctis Lucis Caelum",
-    // "Ignis Scientia",
-    // "Gladiolus Amicitia",
-    // "Prompto Argentum",
-    // "Cecil Harvey",
-    // "Rosa Farrell",
-    // "Lara Croft",
-    // "Nathan Drake",
-    // "Joel Miller",
-    // "Ellie Williams",
-    // "Kratos Spartan",
-    // "Atreus Kratos",
-    // "Geralt Rivia",
-    // "Ciri Rivia",
-    // "Triss Merigold",
-    // "Dante Sparda",
-    // "Vergil Sparda",
-    // "Nero Sparda",
-    // "Lady Nero",
-    // "Ryu Hayabusa",
-    // "Jin Kazama",
-    // "Kazuya Mishima",
-    // "Nina Williams",
-    // "Heihachi Mishima",
-    // "Ken Masters",
-    // "Ryu Hoshi",
-    // "Chun-Li Zhang",
-    // "M. Bison",
-    // "Akuma Gouki",
-    // "Sagat Muay Thai",
-    // "Cammy White",
-    // "Blanka Silva",
-    // "E. Honda",
-    // "Felicia Aensland",
-    // "Jill Valentine",
-    // "Chris Redfield",
-    // "Leon Kennedy",
-    // "Claire Redfield",
-    // "Dante Sparda",
-    // "Luffy Monkey",
-    // "Zoro Roronoa",
-    // "Nami Swashbuckler",
-    // "Usopp Sniper",
-    // "Sanji Vinsmoke",
-    // "Tony Tony Chopper",
-    // "Nico Robin",
-    // "Vivi Nefertari",
-    // "Shanks Red",
-    // "Ace Portgas",
-    // "Izuku Midoriya",
-    // "Katsuki Bakugo",
-    // "Shoto Todoroki",
-    // "Eijiro Kirishima",
-    // "Tenya Iida",
-    // "Tsuyu Asui",
-    // "Momo Yaoyorozu",
-    // "Kanao Tsuyuri",
-    // "Tanjiro Kamado",
-    // "Roronoa Zoro",
-    // "Mikasa Ackerman",
-    // "Armin Arlert",
-    // "Jean Kirstein",
-    // "Levi Ackerman",
-    // "Hange Zoë",
-    // "Reiner Braun",
-    // "Eren Yeager",
-    // "Maki Oze",
-    // "Akane Tsunemori",
-    // "Kogami Shinya",
-    // "Shinya Kogami",
-    // "Saitama Amai",
-    // "Fubuki Kakashi",
-    // "Kenshiro Kasumi",
-    // "Jotaro Kujo",
-    // "Joseph Joestar",
-    // "Giorno Giovanna",
-    // "Naruto Uzumaki",
-    // "Sasuke Uchiha",
-    // "Kakashi Hatake",
-    // "Hinata Hyuga",
-    // "Sakura Haruno",
-    // "Shikamaru Nara",
-    // "Iruka Umino",
-    // "Neji Hyuga",
-    // "Killer Bee",
-    // "Itachi Uchiha",
-    // "Madara Uchiha",
-    // "Minato Namikaze",
+    "Tifa Lockhart",
+    "Barret Wallace",
+    "Aerith Gainsborough",
+    "Squall Leonhart",
+    "Rinoa Heartilly",
+    "Zidane Tribal",
+    "Vivi Ornitier",
+    "Freya Crescent",
+    "Noctis Lucis Caelum",
+    "Ignis Scientia",
+    "Gladiolus Amicitia",
+    "Prompto Argentum",
+    "Cecil Harvey",
+    "Rosa Farrell",
+    "Lara Croft",
+    "Nathan Drake",
+    "Joel Miller",
+    "Ellie Williams",
+    "Kratos Spartan",
+    "Atreus Kratos",
+    "Geralt Rivia",
+    "Ciri Rivia",
+    "Triss Merigold",
+    "Dante Sparda",
+    "Vergil Sparda",
+    "Nero Sparda",
+    "Lady Nero",
+    "Ryu Hayabusa",
+    "Jin Kazama",
+    "Kazuya Mishima",
+    "Nina Williams",
+    "Heihachi Mishima",
+    "Ken Masters",
+    "Ryu Hoshi",
+    "Chun-Li Zhang",
+    "M. Bison",
+    "Akuma Gouki",
+    "Sagat Muay Thai",
+    "Cammy White",
+    "Blanka Silva",
+    "E. Honda",
+    "Felicia Aensland",
+    "Jill Valentine",
+    "Chris Redfield",
+    "Leon Kennedy",
+    "Claire Redfield",
+    "Dante Sparda",
+    "Luffy Monkey",
+    "Zoro Roronoa",
+    "Nami Swashbuckler",
+    "Usopp Sniper",
+    "Sanji Vinsmoke",
+    "Tony Tony Chopper",
+    "Nico Robin",
+    "Vivi Nefertari",
+    "Shanks Red",
+    "Ace Portgas",
+    "Izuku Midoriya",
+    "Katsuki Bakugo",
+    "Shoto Todoroki",
+    "Eijiro Kirishima",
+    "Tenya Iida",
+    "Tsuyu Asui",
+    "Momo Yaoyorozu",
+    "Kanao Tsuyuri",
+    "Tanjiro Kamado",
+    "Roronoa Zoro",
+    "Mikasa Ackerman",
+    "Armin Arlert",
+    "Jean Kirstein",
+    "Levi Ackerman",
+    "Hange Zoë",
+    "Reiner Braun",
+    "Eren Yeager",
+    "Maki Oze",
+    "Akane Tsunemori",
+    "Kogami Shinya",
+    "Shinya Kogami",
+    "Saitama Amai",
+    "Fubuki Kakashi",
+    "Kenshiro Kasumi",
+    "Jotaro Kujo",
+    "Joseph Joestar",
+    "Giorno Giovanna",
+    "Naruto Uzumaki",
+    "Sasuke Uchiha",
+    "Kakashi Hatake",
+    "Hinata Hyuga",
+    "Sakura Haruno",
+    "Shikamaru Nara",
+    "Iruka Umino",
+    "Neji Hyuga",
+    "Killer Bee",
+    "Itachi Uchiha",
+    "Madara Uchiha",
+    "Minato Namikaze",
   ];
 
   const initialArrayLength = namesArray.length;
@@ -220,6 +220,32 @@ const Wheel = () => {
     }, 2000); // Duration of the spin animation
   };
 
+  function getNameRotation() {
+    const sections = initialArrayLength;
+    const nameRotation = 360 / (2 * sections);
+    if (sections === 1) {
+      return "0";
+    } else if (sections === 2) {
+      return "90";
+    } else {
+      return nameRotation;
+    }
+  }
+
+  function getZIndex(index) {
+    const sections = initialArrayLength;
+
+    if (sections === 1 && index === 0) {
+      return "1";
+    } else if (sections === 2 && (index === 0 || index === 2)) {
+      return "1";
+    } else if (sections === 3 && (index === 0 || index === 2 || index === 4)) {
+      return "1";
+    } else {
+      return "0";
+    }
+  }
+
   return (
     <section className="wheelSection">
       <div
@@ -242,7 +268,6 @@ const Wheel = () => {
             const angle = 360 / sections;
             const rotation = angle * index;
             const skew = angle * skewMultiplier;
-            const nameRotation = 360 / (2 * sections);
             return (
               <div
                 key={index}
@@ -250,14 +275,19 @@ const Wheel = () => {
                 style={{
                   transform: `rotate(${rotation}deg) skewY(${skew}deg)`,
                   backgroundColor: getSegmentColor(name, index),
+                  zIndex: getZIndex(index),
                 }}
               >
                 <div
                   className="name"
                   style={{
-                    transform: `skewY(${
-                      skew * -1
-                    }deg) rotate(${nameRotation}deg) translateX(-50%)`,
+                    // transform:
+                    // `skewY(${skew * -1}deg)
+                    // rotate(${nameRotation}deg)
+                    // translateX(-50%)`,
+                    transform: `skewY(${skew * -1}deg) 
+                    rotate(${getNameRotation()}deg) 
+                    translateX(-50%)`,
                     fontSize: `${Math.max(
                       4,
                       Math.min(40, Math.floor(500 / namesArray.length))
