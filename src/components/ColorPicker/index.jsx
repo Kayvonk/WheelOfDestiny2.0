@@ -12,8 +12,8 @@ const ColorPicker = ({ backgroundColors, textColors, onBackgroundColorChange, on
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h2 className="colorPickerHeading">Background</h2>
+    <div className="colorPickerContainer">
+      <h2 className="colorPickerHeading">BG</h2>
       {backgroundColors.map((color, index) => (
         <div key={index} style={{ marginBottom: "10px" }}>
           <input

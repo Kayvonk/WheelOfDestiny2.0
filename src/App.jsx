@@ -3,10 +3,12 @@ import "./App.css";
 import Wheel from "./components/Wheel";
 import Header from "./components/Header";
 import ColorPicker from "./components/ColorPicker";
+import UserList from "./components/UserList";
 
 function App() {
   const [backgroundColors, setBackgroundColors] = useState([null, null, null]);
   const [textColors, setTextColors] = useState([null, null]);
+  const [namesArray, setNamesArray] = useState([]);
 
   // Function to retrieve colors from localStorage
   const getStoredColors = () => {
@@ -49,6 +51,10 @@ function App() {
     localStorage.setItem(`color${index + 4}`, newColor);
   };
 
+  const handleNamesArrayChange = (newNamesArray) => {
+    setNamesArray(newNamesArray);
+  };
+
   return (
     <>
       <Header color1={backgroundColors[0]} color4={textColors[0]}/>
@@ -57,13 +63,22 @@ function App() {
         color2={backgroundColors[1]}
         color3={backgroundColors[2]}
         color5={textColors[1]}
+        namesArray={namesArray}
       />
+      <section className="menu">
+
+
       <ColorPicker
         backgroundColors={backgroundColors}
         textColors={textColors}
         onBackgroundColorChange={handleBackgroundColorChange}
         onTextColorChange={handleTextColorChange}
       />
+      <UserList
+       namesArray={namesArray}
+       onNamesArrayChange={handleNamesArrayChange}
+      />
+      </section>
     </>
   );
 }
