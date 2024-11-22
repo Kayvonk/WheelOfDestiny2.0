@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./style.css";
 
-const Wheel = () => {
-  let bgColor1 = "rgb(255, 69, 0)";
-  let bgColor2 = "rgb(60, 179, 113)";
-  let bgColor3 = "rgb(72, 61, 139)";
-
+const Wheel = ({ color1, color2, color3, color5 }) => {
+  let bgColor1 = color1;
+  let bgColor2 = color2;
+  let bgColor3 = color3;
+  let textColor2 = color5;
   let namesArray = [
     "Mario Mario",
     "Luigi Mario",
@@ -281,10 +281,7 @@ const Wheel = () => {
                 <div
                   className="name"
                   style={{
-                    // transform:
-                    // `skewY(${skew * -1}deg)
-                    // rotate(${nameRotation}deg)
-                    // translateX(-50%)`,
+                    color: textColor2,
                     transform: `skewY(${skew * -1}deg) 
                     rotate(${getNameRotation()}deg) 
                     translateX(-50%)`,
