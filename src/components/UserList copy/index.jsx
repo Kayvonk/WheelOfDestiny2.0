@@ -66,7 +66,6 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
     <div className="user-list">
       <h2>User List</h2>
 
-      {/* Render inputs for each user */}
       {namesArray.map((name, index) => (
         <div key={index} className="user-item">
           <input
@@ -74,6 +73,9 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
             value={name}
             onChange={(e) => handleInputChange(index, e.target.value)}
           />
+          <div className="visible-user-buttons">
+
+          
           <button onClick={() => removeUser(index)} className="remove-button">
             <svg
               width="15"
@@ -122,10 +124,27 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
               />
             </svg>
           </button>
+          </div>
         </div>
       ))}
-
-      {/* Hidden Users Section */}
+      <div className="add-button-container">
+        <button onClick={addUser} className="add-button">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M10 3v14M3 10h14"
+              stroke="black"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </button>
+      </div>
       {hiddenUsers.length > 0 && (
         <div className="hidden-users">
           <h3>Hidden Users</h3>
@@ -165,24 +184,7 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
         </div>
       )}
 
-      {/* Add and Clear Buttons */}
-      <div className="actions">
-        <button onClick={addUser} className="add-button">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M10 3v14M3 10h14"
-              stroke="black"
-              strokeWidth="2.5"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-        </button>
+      <div className="clear-button-container">
         <button onClick={() => setIsModalOpen(true)} className="clear-button">
           <svg
             width="20"
@@ -208,8 +210,6 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
           </svg>
         </button>
       </div>
-
-      {/* Modal */}
       {isModalOpen && (
         <div className="modal-overlay">
           <div className="modal-content">

@@ -74,56 +74,56 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
             onChange={(e) => handleInputChange(index, e.target.value)}
           />
           <div className="visible-user-buttons">
-
-          
-          <button onClick={() => removeUser(index)} className="remove-button">
-            <svg
-              width="15"
-              height="15"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M0 0l20 20M20 0l-20 20"
-                stroke="#f2f2f2"
-                strokeWidth="3"
-              />
-            </svg>
-          </button>
-          <button onClick={() => hideUser(index)} className="hide-button">
-            <svg
-              width="30"
-              height="25"
-              viewBox="0 0 40 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M20 1C10 1 2 10 2 10s8 9 18 9 18-9 18-9-8-9-18-9z"
-                fill="none"
-                stroke="#f2f2f2"
-                strokeWidth="2"
-                transform="scale(0.75) translate(5, 2.5)"
-              />
-              <circle
-                cx="20"
-                cy="10"
-                r="6"
-                fill="none"
-                stroke="#f2f2f2"
-                strokeWidth="2"
-                transform="scale(0.75) translate(5, 2.5)"
-              />
-              <line
-                x1="10"
-                y1="0"
-                x2="30"
-                y2="20"
-                stroke="#f2f2f2"
-                strokeWidth="2"
-                transform="scale(0.75) translate(5, 2.5)"
-              />
-            </svg>
-          </button>
+            <button onClick={() => removeUser(index)} className="remove-button">
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>remove</title>
+                <path
+                  d="M0 0l20 20M20 0l-20 20"
+                  stroke="#f2f2f2"
+                  strokeWidth="3"
+                />
+              </svg>
+            </button>
+            <button onClick={() => hideUser(index)} className="hide-button">
+              <svg
+                width="30"
+                height="25"
+                viewBox="0 0 40 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>hide</title>
+                <path
+                  d="M20 1C10 1 2 10 2 10s8 9 18 9 18-9 18-9-8-9-18-9z"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeWidth="2"
+                  transform="scale(0.75) translate(5, 2.5)"
+                />
+                <circle
+                  cx="20"
+                  cy="10"
+                  r="6"
+                  fill="none"
+                  stroke="#f2f2f2"
+                  strokeWidth="2"
+                  transform="scale(0.75) translate(5, 2.5)"
+                />
+                <line
+                  x1="10"
+                  y1="0"
+                  x2="30"
+                  y2="20"
+                  stroke="#f2f2f2"
+                  strokeWidth="2"
+                  transform="scale(0.75) translate(5, 2.5)"
+                />
+              </svg>
+            </button>
           </div>
         </div>
       ))}
@@ -135,6 +135,7 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>add user</title>
             <path
               d="M10 3v14M3 10h14"
               stroke="black"
@@ -161,6 +162,7 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
                   viewBox="0 0 40 20"
                   xmlns="http://www.w3.org/2000/svg"
                 >
+                  <title>unhide</title>
                   <path
                     d="M20 1C10 1 2 10 2 10s8 9 18 9 18-9 18-9-8-9-18-9z"
                     fill="none"
@@ -192,6 +194,7 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
           >
+            <title>clear all users</title>
             <circle
               cx="10"
               cy="10"
