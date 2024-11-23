@@ -57,7 +57,7 @@ function App() {
 
   return (
     <>
-      <Header color1={backgroundColors[0]} color4={textColors[0]}/>
+      <Header color1={backgroundColors[0]} color4={textColors[0]} />
       <Wheel
         color1={backgroundColors[0]}
         color2={backgroundColors[1]}
@@ -66,18 +66,16 @@ function App() {
         namesArray={namesArray}
       />
       <section className="menu">
-
-
-      <ColorPicker
-        backgroundColors={backgroundColors}
-        textColors={textColors}
-        onBackgroundColorChange={handleBackgroundColorChange}
-        onTextColorChange={handleTextColorChange}
-      />
-      <UserList
-       namesArray={namesArray}
-       onNamesArrayChange={handleNamesArrayChange}
-      />
+        <ColorPicker
+          backgroundColors={backgroundColors}
+          textColors={textColors}
+          onBackgroundColorChange={handleBackgroundColorChange}
+          onTextColorChange={handleTextColorChange}
+        />
+        <UserList
+          namesArray={namesArray}
+          onNamesArrayChange={handleNamesArrayChange}
+        />
       </section>
     </>
   );

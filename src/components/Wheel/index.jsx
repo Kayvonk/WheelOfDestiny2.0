@@ -6,7 +6,6 @@ const Wheel = ({ color1, color2, color3, color5, namesArray }) => {
   let bgColor2 = color2;
   let bgColor3 = color3;
   let textColor2 = color5;
- 
 
   const initialArrayLength = namesArray.length;
 
