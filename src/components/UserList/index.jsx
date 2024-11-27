@@ -35,6 +35,7 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
   };
 
   const addUser = () => {
+    if (namesArray[namesArray.length - 1] === "") return;
     setNamesArray([...namesArray, ""]);
   };
 
@@ -44,6 +45,7 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
   };
 
   const hideUser = (index) => {
+    if (namesArray[index] === "") return;
     const userToHide = namesArray[index];
     const updatedNames = namesArray.filter((_, i) => i !== index);
     setNamesArray(updatedNames);
@@ -51,9 +53,19 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
   };
 
   const unhideUser = (user) => {
+    if (namesArray[namesArray.length - 1] === "") {
+      const updatedNamesArray = namesArray.filter((names) => names !== "")
+    const updatedHiddenUsers = hiddenUsers.filter((hidden) => hidden !== user);
+    setHiddenUsers(updatedHiddenUsers);
+    setNamesArray([...updatedNamesArray, user, ""]);
+  }
+  else {
     const updatedHiddenUsers = hiddenUsers.filter((hidden) => hidden !== user);
     setHiddenUsers(updatedHiddenUsers);
     setNamesArray([...namesArray, user]);
+  }
+    
+
   };
 
   const clearNamesArray = () => {
@@ -89,41 +101,44 @@ const UserList = ({ namesArray: parentNamesArray, onNamesArrayChange }) => {
                 />
               </svg>
             </button>
-            <button onClick={() => hideUser(index)} className="hide-button">
-              <svg
-                width="30"
-                height="25"
-                viewBox="0 0 40 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <title>hide</title>
-                <path
-                  d="M20 1C10 1 2 10 2 10s8 9 18 9 18-9 18-9-8-9-18-9z"
-                  fill="none"
-                  stroke="#f2f2f2"
-                  strokeWidth="2"
-                  transform="scale(0.75) translate(5, 2.5)"
-                />
-                <circle
-                  cx="20"
-                  cy="10"
-                  r="6"
-                  fill="none"
-                  stroke="#f2f2f2"
-                  strokeWidth="2"
-                  transform="scale(0.75) translate(5, 2.5)"
-                />
-                <line
-                  x1="10"
-                  y1="0"
-                  x2="30"
-                  y2="20"
-                  stroke="#f2f2f2"
-                  strokeWidth="2"
-                  transform="scale(0.75) translate(5, 2.5)"
-                />
-              </svg>
-            </button>
+
+           
+              <button onClick={() => hideUser(index)} className="hide-button">
+                <svg
+                  width="30"
+                  height="25"
+                  viewBox="0 0 40 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <title>hide</title>
+                  <path
+                    d="M20 1C10 1 2 10 2 10s8 9 18 9 18-9 18-9-8-9-18-9z"
+                    fill="none"
+                    stroke={ namesArray[index] !== "" ? "#f2f2f2" : "#757575"}
+                    strokeWidth="2"
+                    transform="scale(0.75) translate(5, 2.5)"
+                  />
+                  <circle
+                    cx="20"
+                    cy="10"
+                    r="6"
+                    fill="none"
+                    stroke={ namesArray[index] !== "" ? "#f2f2f2" : "#757575"}
+                    strokeWidth="2"
+                    transform="scale(0.75) translate(5, 2.5)"
+                  />
+                  <line
+                    x1="10"
+                    y1="0"
+                    x2="30"
+                    y2="20"
+                    stroke={ namesArray[index] !== "" ? "#f2f2f2" : "#757575"}
+                    strokeWidth="2"
+                    transform="scale(0.75) translate(5, 2.5)"
+                  />
+                </svg>
+              </button>
+        
           </div>
         </div>
       ))}
