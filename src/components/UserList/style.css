@@ -16,6 +16,9 @@
 .user-item input {
   padding: 10px;
   border-radius: 10px;
+  min-width: 150px;
+  width: 20vw;
+  max-width: 175px;
 }
 
 .visible-user-buttons {
@@ -59,7 +62,7 @@ justify-content: space-between;
 }
 
 .clear-button-container {
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   justify-content: end; 
 }
