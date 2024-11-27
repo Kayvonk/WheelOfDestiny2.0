@@ -21,6 +21,7 @@ function App() {
       textColors: [
         localStorage.getItem("color4") || "#f2f2f2",
         localStorage.getItem("color5") || "#f2f2f2",
+        localStorage.getItem("color6") || "#f2f2f2",
       ],
     };
   };
@@ -62,7 +63,9 @@ function App() {
         color1={backgroundColors[0]}
         color2={backgroundColors[1]}
         color3={backgroundColors[2]}
-        color5={textColors[1]}
+        color5={textColors[0]}
+        color6={textColors[1]}
+        color7={textColors[2]}
         namesArray={namesArray}
       />
       <section className="menu">

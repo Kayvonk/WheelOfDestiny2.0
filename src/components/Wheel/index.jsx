@@ -1,11 +1,21 @@
 import { useState } from "react";
 import "./style.css";
 
-const Wheel = ({ color1, color2, color3, color5, namesArray }) => {
+const Wheel = ({
+  color1,
+  color2,
+  color3,
+  color5,
+  color6,
+  color7,
+  namesArray,
+}) => {
   let bgColor1 = color1;
   let bgColor2 = color2;
   let bgColor3 = color3;
-  let textColor2 = color5;
+  let textColor1 = color5;
+  let textColor2 = color6;
+  let textColor3 = color7;
 
   const initialArrayLength = namesArray.length;
 
@@ -59,7 +69,7 @@ const Wheel = ({ color1, color2, color3, color5, namesArray }) => {
   };
   let previousColor;
 
-  const getSegmentColor = (name, index) => {
+  const getSegmentColor = (index) => {
     if (namesArray[index] === namesArray[index - 1]) {
       return previousColor;
     }
@@ -98,6 +108,55 @@ const Wheel = ({ color1, color2, color3, color5, namesArray }) => {
     if ((index % 2 !== 0 && !swapColors) || (index % 2 === 0 && swapColors)) {
       previousColor = bgColor2;
       return bgColor2;
+    }
+  };
+
+  let previousTextColor;
+
+  const getTextColor = (index) => {
+    if (index === 0) {
+      previousTextColor = textColor1;
+      return textColor1;
+    }
+
+    if (namesArray[index] === namesArray[index - 1]) {
+      return previousTextColor;
+    }
+
+    if (initialArrayLength === 2) {
+      if (index < 2) {
+        previousTextColor = textColor1;
+        return textColor1;
+      } else {
+        previousTextColor = textColor2;
+        return textColor2;
+      }
+    } else if (initialArrayLength === 3) {
+      if (index < 2) {
+        previousTextColor = textColor1;
+        return textColor1;
+      } else if (index < 4) {
+        previousTextColor = textColor2;
+        return textColor2;
+      } else {
+        previousTextColor = textColor3;
+        return textColor3;
+      }
+    }
+
+    if (index === 0) {
+      previousTextColor = textColor1;
+      return textColor1;
+    } else if (
+      (index % 2 === 0 && !swapColors) ||
+      (index % 2 !== 0 && swapColors)
+    ) {
+      previousTextColor = textColor3;
+      return textColor3;
+    }
+    if ((index % 2 !== 0 && !swapColors) || (index % 2 === 0 && swapColors)) {
+      previousTextColor = textColor2;
+      return textColor2;
     }
   };
 
@@ -171,14 +230,14 @@ const Wheel = ({ color1, color2, color3, color5, namesArray }) => {
                 className="segment"
                 style={{
                   transform: `rotate(${rotation}deg) skewY(${skew}deg)`,
-                  backgroundColor: getSegmentColor(name, index),
+                  backgroundColor: getSegmentColor(index),
                   zIndex: getZIndex(index),
                 }}
               >
                 <div
                   className="name"
                   style={{
-                    color: textColor2,
+                    color: getTextColor(index),
                     transform: `skewY(${skew * -1}deg) 
                     rotate(${getNameRotation()}deg) 
                     translateX(-50%)`,
