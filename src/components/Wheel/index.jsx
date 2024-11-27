@@ -92,12 +92,12 @@ const Wheel = ({ color1, color2, color3, color5, namesArray }) => {
       (index % 2 === 0 && !swapColors) ||
       (index % 2 !== 0 && swapColors)
     ) {
-      previousColor = bgColor2;
-      return bgColor2;
-    }
-    if ((index % 2 !== 0 && !swapColors) || (index % 2 === 0 && swapColors)) {
       previousColor = bgColor3;
       return bgColor3;
+    }
+    if ((index % 2 !== 0 && !swapColors) || (index % 2 === 0 && swapColors)) {
+      previousColor = bgColor2;
+      return bgColor2;
     }
   };
 
