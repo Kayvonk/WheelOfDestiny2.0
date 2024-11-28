@@ -132,17 +132,24 @@ justify-content: space-between;
 }
 
 .confirm-button {
-  background-color: green;
+  background-color: #257a25;
   color: white;
+}
+
+.confirm-button:hover {
+  background-color: #2d8a2d;
 }
 
 .cancel-button {
-  background-color: red;
+  background-color: #993030;
   color: white;
 }
 
+.cancel-button:hover {
+  background-color: #b93c3c;
+}
+
 .user-list > h2 {
-  margin: ;
   color: #f2f2f2;
 }
 

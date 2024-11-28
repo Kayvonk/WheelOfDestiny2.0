@@ -56,7 +56,7 @@ const Wheel = ({
       return "";
     }
 
-    const nameParts = name.split(" ");
+    const nameParts = name.trim().split(" ");
     if (nameParts.length === 1) {
       return nameParts[0].charAt(0).toUpperCase();
     } else {
